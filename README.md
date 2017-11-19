@@ -60,11 +60,11 @@ Constraints:
 		[POST] http://localhost:8080/api/stock
 		
 		[Payload]
-		{
-          "name": "XXX",
-          "price": {
-            "amount": 999.99,
-            "currency": "USD"
-          }
+        {
+            "name": "XXX",
+            "price": {
+                "amount": 999.99,
+                "currency": "USD"
+            }
         }
 	```

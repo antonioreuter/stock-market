@@ -15,6 +15,16 @@ An example of a Web API for Stock Market.
 ### Requirements
 - JDK 1.8
 
+Checkout the code.
+
+```
+	git clone https://github.com/antonioreuter/stock-market.git
+	cd stock-market
+	
+	[branch]
+	git checkout ar-list-stocks
+```
+
 Executing the command below, it'll install all the project dependencies and build the package.
 
 ```

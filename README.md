@@ -50,16 +50,17 @@ To guarantee that only allowed users can access the API, we added a security lay
 To create a new stock, we need to be aware of a few constraints that we have to fulfill.
 
 Constraints:
+
 	* version: If you try to update a stock, however, the stock is outdated, you will get a conflict.
 	* name: Is not possible to create 2 stocks with the same name.
 	* price: Cannot be lower than ZERO. If you do not specify a currency, the default value will be USD (United State of America Dollar).
 
 ### Endpoint & payload
 	```
-		[Local]
-		[POST] http://localhost:8080/api/stock
-		
-		[Payload]
+        [Local]
+        [POST] http://localhost:8080/api/stock
+        
+        [Payload]
         {
             "name": "XXX",
             "price": {

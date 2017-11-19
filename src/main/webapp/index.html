@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="StockApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css">
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <h1>Stock Market</h1>
+    <div ng-controller="StockCtrl as vm">
+
+        <div ui-grid="gridOptions" ui-grid-pagination class="grid"></div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; Company 2016</p>
+    </footer>
+</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
+
+<script src="js/app.js" ></script>
+
+</html>

@@ -1,0 +1,59 @@
+group 'com.stock'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'stock-market'
+    version =  getVersion()
+}
+
+springBoot {
+    mainClass = 'com.stock.Application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile group: 'com.h2database', name: 'h2'
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.6.1'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.6.1'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+
+
+    runtime group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310'
+    runtime group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jdk8'
+
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web') {
+        exclude module: 'spring-boot-starter-tomcat'
+    }
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jetty'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest'
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools'
+
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.16.8'
+
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+}
